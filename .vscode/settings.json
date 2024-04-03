@@ -1,4 +1,5 @@
 {
   "appService.defaultWebAppToDeploy": "/subscriptions/366dccab-9ffd-4958-8323-88db123d0216/resourceGroups/mongodb-azure/providers/Microsoft.Web/sites/verkkokauppa/subscriptions/366dccab-9ffd-4958-8323-88db123d0216/resourceGroups/appsvc_linux_centralus/providers/Microsoft.Web/sites/verkkokauppa-api",
-  "appService.deploySubpath": "."
+  "appService.deploySubpath": ".",
+  "appService.zipIgnorePattern": ["node_modules{,/**}", ".vscode{,/**}"]
 }

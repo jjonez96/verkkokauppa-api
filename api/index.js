@@ -1,10 +1,10 @@
 const express = require("express");
 const app = express();
 const mongoose = require("mongoose");
-const port = 8000;
 const cors = require("cors");
 app.use(cors());
 require("dotenv").config({ path: ".env" });
+app.listen(process.env.PORT || 8000);
 
 // MongoDB connection URI
 const uri = process.env.MONGODB_URI;
@@ -85,9 +85,4 @@ app.get("/orders", async (req, res) => {
 app.use((err, req, res, next) => {
   console.error(err.stack);
   res.status(500).json({ error: "Something went wrong!" });
-});
-
-// Start the server
-app.listen(port, () => {
-  console.log(`Server is running on port ${port}`);
 });
